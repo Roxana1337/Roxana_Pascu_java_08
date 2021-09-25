@@ -12,7 +12,6 @@ public class VTA {
         double priceWithoutVTA = scanner.useLocale(Locale.ENGLISH).nextDouble();
 
         if (priceWithoutVTA > 0) {
-            calculatePrice(priceWithoutVTA);
             System.out.println("The full price of the product is: " + calculatePrice(priceWithoutVTA));
         } else
             System.out.println("Please provide a valid price");
@@ -20,7 +19,9 @@ public class VTA {
 
 
     private static double calculatePrice(double priceWithoutVTA) {
-        double VTA = 16;
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Please introduce the VTA: ");
+        double VTA = scanner.useLocale(Locale.ENGLISH).nextDouble();
         double priceWithVTA = priceWithoutVTA + VTA / 100 * priceWithoutVTA;
         return priceWithVTA;
     }
