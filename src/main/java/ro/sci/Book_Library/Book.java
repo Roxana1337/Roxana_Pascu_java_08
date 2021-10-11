@@ -23,6 +23,7 @@ public class Book {
     }
 
     public void deleteArtAlbum(String type, String bookName, String authorName, int pagesNumber) {
+
     }
 
         public void listBooks() {

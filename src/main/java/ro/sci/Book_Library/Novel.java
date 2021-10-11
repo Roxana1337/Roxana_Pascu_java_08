@@ -48,6 +48,7 @@ public class Novel extends Book {
         this.type = type;
     }
 
+
     @Override
     public String toString() { return "Novel: Book type: " + type + ", " + " Book name: " + bookName + ", " +
             " Author name: " + authorName + ", " + " Pages number: " + pagesNumber;}

@@ -14,6 +14,7 @@ public class ArtAlbum extends Book {
         this.pagesNumber = pagesNumber;
     }
 
+
     public String getPageQuality() {
         return pageQuality;
     }

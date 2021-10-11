@@ -10,6 +10,7 @@ public class Main {
         book.addArtAlbum("great", "Surrender", "Hurts", 10);
         book.addArtAlbum("poor", "Low", "David Bowie", 4);
 
+
 //        book.deleteNovel();
 //
 //        book.deleteArtAlbum();
