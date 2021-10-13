@@ -11,9 +11,11 @@ public class Main {
         book.addArtAlbum("poor", "Low", "David Bowie", 4);
 
 
-//        book.deleteNovel();
-//
-//        book.deleteArtAlbum();
+        book.listBooks();
+
+        book.deleteNovel("Gone Girl");
+
+        book.deleteArtAlbum("Surrender");
 
         book.listBooks();
 

@@ -1,27 +1,25 @@
 package ro.sci.Book_Library;
 
-import java.util.Scanner;
-
 public class Novel extends Book {
 
-    String bookName;
+    String novelName;
     String authorName;
     int pagesNumber;
     String type;
 
-    public Novel (String type, String bookName, String authorName, int pagesNumber) {
+    public Novel (String type, String novelName, String authorName, int pagesNumber) {
         this.type = type;
-        this.bookName = bookName;
+        this.novelName = novelName;
         this.authorName = authorName;
         this.pagesNumber = pagesNumber;
     }
 
-    public String getBookName() {
-        return bookName;
+    public String getNovelName() {
+        return novelName;
     }
 
-    public void setBookName(String bookName) {
-        this.bookName = bookName;
+    public void setNovelName(String novelName) {
+        this.novelName = novelName;
     }
 
     public String getAuthorName() {
@@ -50,7 +48,7 @@ public class Novel extends Book {
 
 
     @Override
-    public String toString() { return "Novel: Book type: " + type + ", " + " Book name: " + bookName + ", " +
+    public String toString() { return "Novel: Book type: " + type + ", " + " Book name: " + novelName + ", " +
             " Author name: " + authorName + ", " + " Pages number: " + pagesNumber;}
 
 }

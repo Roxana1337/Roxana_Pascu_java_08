@@ -5,62 +5,42 @@ import java.util.ArrayList;
 public class Book {
 
     ArrayList<Book> library = new ArrayList<>();
-    String bookName;
-    String authorName;
-    int pagesNumber;
+    ArrayList<Novel> novels = new ArrayList<>();
+    ArrayList<ArtAlbum> artAlbums = new ArrayList<>();
 
-    public void addNovel (String type, String bookName, String authorName, int pagesNumber) {
-        Book novel = new Novel (type, bookName, authorName, pagesNumber);
+    public void addNovel(String type, String novelName, String authorName, int pagesNumber) {
+        Book novel = new Novel(type, novelName, authorName, pagesNumber);
+        novels.add((Novel) novel);
         library.add(novel);
     }
 
-    public void addArtAlbum (String pageQuality, String bookName, String authorName, int pagesNumber) {
-        Book artAlbum = new ArtAlbum (pageQuality, bookName, authorName, pagesNumber);
+    public void addArtAlbum(String pageQuality, String artAlbumName, String authorName, int pagesNumber) {
+        Book artAlbum = new ArtAlbum(pageQuality, artAlbumName, authorName, pagesNumber);
+        artAlbums.add((ArtAlbum) artAlbum);
         library.add(artAlbum);
-    }
-
-    public void deleteNovel(String type, String bookName, String authorName, int pagesNumber) {
-    }
-
-    public void deleteArtAlbum(String type, String bookName, String authorName, int pagesNumber) {
 
     }
 
-        public void listBooks() {
-        for (int i = 0; i < library.size(); i++) {
-            System.out.println(library.get(i).toString());
+    public void deleteNovel(String novelName) {
+        for (Novel n : novels) {
+            if (n.getNovelName().equalsIgnoreCase(novelName)) {
+                library.remove(n);
+            }
         }
     }
 
-    public String getBookName() {
-        return bookName;
+    public void deleteArtAlbum(String artAlbumName) {
+        for (ArtAlbum a : artAlbums) {
+            if (a.getArtAlbumName().equalsIgnoreCase(artAlbumName)) {
+                library.remove(a);
+            }
+        }
+    }
+        public void listBooks() {
+            for (int i = 0; i < library.size(); i++) {
+                System.out.println(library.get(i).toString());
+            }
+        }
     }
 
-    public void setBookName(String bookName) {
-        this.bookName = bookName;
-    }
 
-    public String getAuthorName() {
-        return authorName;
-    }
-
-    public void setAuthorName(String authorName) {
-        this.authorName = authorName;
-    }
-
-    public int getPagesNumber() {
-        return pagesNumber;
-    }
-
-    public void setPagesNumber(int pagesNumber) {
-        this.pagesNumber = pagesNumber;
-    }
-
-    public ArrayList<Book> getLibrary() {
-        return library;
-    }
-
-    public void setLibrary(ArrayList<Book> library) {
-        this.library = library;
-    }
-}
