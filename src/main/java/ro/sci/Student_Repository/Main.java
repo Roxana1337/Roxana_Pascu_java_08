@@ -6,7 +6,7 @@ public class Main {
 
         Catalog studentCatalog = new Catalog();
         Catalog studentCatalogByLastName = new Catalog();
-        studentCatalog.addStudent("Stefana", "Panaite", "18/11/1997", "f", "2971118226718");
+        studentCatalog.addStudent("", "Panaite", "18/11/1997", "f", "2971118226718");
         studentCatalog.addStudent("Vasile", "Ionescu", "12/06/2001", "m", "1010612224712");
         studentCatalog.addStudent("Ovidiu", "Avasilcai", "01/11/2020", "f", "2201101226718");
         studentCatalog.addStudent("Mariana", "Andries", "07/02/2000", "M", "2000207221165");
